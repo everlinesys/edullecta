@@ -1,29 +1,24 @@
-# Edullecta — React/Vite Website
+# Edullecta React Website
 
-Responsive Edullecta marketing website based on the supplied Student Development Brochure.
+React + Vite website for Edullecta — Education, Skills & Opportunities.
 
-## Deploy to Vercel
-
-This project intentionally runs Vite through Node in the npm scripts instead of executing `node_modules/.bin/vite` directly. This avoids Vercel build failures caused by an incorrect executable permission on the Vite shim (`/vercel/path0/node_modules/.bin/vite: Permission denied`).
-
-1. Upload/import this folder as a Vercel project.
-2. Framework: Vite (auto-detected).
-3. Build command: `npm run build`.
-4. Output directory: `dist`.
-5. Do not upload `node_modules`.
-
-## Local development
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Production build
+## Build
 
 ```bash
 npm run build
-npm run preview
 ```
 
-The brochure artwork is included at `public/assets/brochure.png`.
+## Notes
+
+- The Edullecta logo is cropped directly from the supplied brochure artwork and used as the site logo.
+- The brochure image has been removed from the hero section.
+- The hero now uses a new Kerala/student image asset at `public/assets/hero-students.jpg`.
+- AOS (Animate On Scroll) is loaded from the official unpkg CDN and initialized from React.
+- The project intentionally runs Vite through Node (`node node_modules/vite/bin/vite.js`) to avoid Vercel executable-permission issues with `node_modules/.bin/vite`.
